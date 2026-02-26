@@ -30,7 +30,7 @@ from pathlib import Path
 
 # Section: Configuration.
 
-PROCESSED_DIR = Path("data/processed")
+PROCESSED_DIR = Path("data/processed/C")
 PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
 
 DOC_ID    = "C_recurring_events_pittsburgh"

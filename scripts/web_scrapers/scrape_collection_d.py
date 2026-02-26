@@ -363,8 +363,8 @@ def crawl_all(tasks: list[dict], dry_run: bool = False) -> dict[str, int]:
 
         # Respect free-plan rate limit (2 requests/minute).
         if results:   # skip waiting before the first task
-            print("  [rate limit] waiting 62s before next request...")
-            time.sleep(62)
+            print("  [rate limit] waiting 10s before next request...")
+            time.sleep(10)
 
         job_id = start_crawl(task)
         if not job_id:

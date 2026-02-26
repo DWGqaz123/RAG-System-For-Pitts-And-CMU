@@ -35,8 +35,8 @@ Supports two file types
 
 Output
 ------
-    data/processed/C_docs.jsonl    (append)
-    data/processed/C_chunks.jsonl  (append)
+    data/processed/C/C_docs.jsonl    (append)
+    data/processed/C/C_chunks.jsonl  (append)
 
 Usage (Notebook)
 ----------------
@@ -56,7 +56,7 @@ from pathlib import Path
 # Path config
 # ---------------------------------------------------------------------------
 
-PROCESSED_DIR = Path("data/processed")
+PROCESSED_DIR = Path("data/processed/C")
 OUT_DOCS      = PROCESSED_DIR / "C_docs.jsonl"
 OUT_CHUNKS    = PROCESSED_DIR / "C_chunks.jsonl"
 

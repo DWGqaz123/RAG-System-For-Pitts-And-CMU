@@ -6,10 +6,10 @@ Sources:
   2. Pittsburgh 2025 Operating Budget
 
 Output:
-  data/raw/payroll_tax_regulations.pdf
-  data/raw/2025_operating_budget.pdf
-  data/processed/payroll_tax_regulations.md
-  data/processed/2025_operating_budget.md
+    data/raw/B/payroll_tax_regulations.pdf
+    data/raw/B/2025_operating_budget.pdf
+    data/processed/B/payroll_tax_regulations.md
+    data/processed/B/2025_operating_budget.md
 
 Usage:
     from scrape_pdf_collection_b import process_all, TARGETS
@@ -27,8 +27,8 @@ import pymupdf4llm   # install via: pip install pymupdf4llm
 
 # Section: Configuration.
 
-RAW_DIR       = Path("data/raw")
-PROCESSED_DIR = Path("data/processed")
+RAW_DIR       = Path("data/raw/B")
+PROCESSED_DIR = Path("data/processed/B")
 RAW_DIR.mkdir(parents=True, exist_ok=True)
 PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
 

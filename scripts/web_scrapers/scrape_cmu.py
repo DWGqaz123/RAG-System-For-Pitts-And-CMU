@@ -2,7 +2,7 @@
 scrape_cmu.py
 -------------
 Scrape Carnegie Mellon University pages using Firecrawl API.
-Raw output saved to scraped_data/raw/, cleaned Markdown to scraped_data/processed/.
+Raw output saved to data/raw/A, cleaned Markdown to data/processed/A.
 
 Usage (import in notebook):
     from scrape_cmu import scrape_all, TARGETS
@@ -20,8 +20,8 @@ import requests
 
 BASE_URL = "https://api.firecrawl.dev/v1"
 
-RAW_DIR       = Path("scraped_data/raw")
-PROCESSED_DIR = Path("scraped_data/processed")
+RAW_DIR       = Path("data/raw/A")
+PROCESSED_DIR = Path("data/processed/A")
 RAW_DIR.mkdir(parents=True, exist_ok=True)
 PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -152,7 +152,7 @@ def _yaml_header(target: dict, metadata: dict) -> str:
 
 
 def save_raw(result: dict, target: dict) -> Path:
-    """Write raw Markdown to scraped_data/raw/."""
+    """Write raw Markdown to data/raw/A."""
     data     = result.get("data", {})
     markdown = data.get("markdown", "")
     metadata = data.get("metadata", {})
@@ -162,7 +162,7 @@ def save_raw(result: dict, target: dict) -> Path:
 
 
 def save_processed(result: dict, target: dict) -> Path:
-    """Write cleaned Markdown to scraped_data/processed/."""
+    """Write cleaned Markdown to data/processed/A."""
     data     = result.get("data", {})
     markdown = data.get("markdown", "")
     metadata = data.get("metadata", {})

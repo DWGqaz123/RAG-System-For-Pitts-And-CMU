@@ -11,7 +11,7 @@ from huggingface_hub import InferenceClient
 # Configuration
 # ---------------------------------------------------------------------------
 
-GENERATOR_MODEL   = "meta-llama/Llama-3.1-8B-Instruct"
+GENERATOR_MODEL   = "Qwen/Qwen2.5-14B-Instruct:featherless-ai"
 TOP_K_RETRIEVAL   = 20
 TOP_N_CONTEXT     = 10
 MAX_CONTEXT_CHARS = 1000
@@ -24,31 +24,29 @@ GENERATION_SYSTEM_PROMPT = """\
 You are the final answer generator in a Retrieval-Augmented Generation (RAG) system.
 
 Your objective:
-Provide the most complete and helpful answer possible using the retrieved context.
+Provide the direct and helpful answer using the retrieved context.
 
 IMPORTANT PRIORITY:
-1) Try your best to answer the question.
+1) Try your best to answer the question directly.
 2) Use the retrieved context as the primary source.
-3) If some parts of the question are not directly answered in the context:
-   - Use reasonable inference based ONLY on the provided information.
-   - Clearly separate confirmed facts from logical inferences.
-4) Do NOT say "I don't know" unless the context is completely unrelated.
+3) Do NOT say "I don't know" unless the context is completely unrelated.
+4) If multiple documents conflict, prefer:
+   - More specific information over general information
+   - More recent information over older information
 
 Grounding Rules:
-- Every factual claim must be supported by the retrieved context.
 - Do NOT invent specific numbers, dates, policies, or names not found in the context.
 - If exact details are missing, provide a general but relevant explanation based on what is available.
-- If the question asks for recommendations, synthesize based on the retrieved information.
 
 For event-related questions:
 - Only consider recurring events OR events on/after March 19, 2026.
 - Ignore past non-recurring events before that date.
 
 Answer style:
-- Be clear and structured.
+- Be clear and concise.
+- Answer the question concisely. 
 - Do NOT mention "retrieved context" or "documents".
 - Do NOT fabricate missing details.
-- Answer the question concisely. 
 - Do not repeat the question. Use the same terminology as the context
 """
 
@@ -180,14 +178,14 @@ class RAGPipeline:
         self._log(f"\n{'─'*55}")
         self._log(f"Query: {query!r}")
 
-        # ── 1. Route → top-2 collections ─────────────────────────────
+        # ── 1. Route → top-2 collections ───────────────────────────
         t0 = time.time()
         routed_cols = self._router.route(query)
-        routed_cols = self._ensure_two_collections(routed_cols)
+        routed_cols = self._normalize_collections(routed_cols)
         latency["route"] = (time.time() - t0) * 1000
         self._log(f"[1] Route → {routed_cols}  ({latency['route']:.0f}ms)")
 
-        # ── 2. Dense retrieval ── run on top-2 collections, merge results ───────────────
+        # ── 2. Dense retrieval ── run on routed collection(s), merge results ─────────────
         t0       = time.time()
         # embedder = _load_embedder(_detect_device())
         # dense_hits: list[dict] = []
@@ -216,7 +214,7 @@ class RAGPipeline:
         latency["dense"] = (time.time() - t0) * 1000
         self._log(f"[2] Dense  → {len(dense_hits)} hits  ({latency['dense']:.0f}ms)")
 
-        # ── 3. Sparse retrieval ─ run on top-2 collections, merge results ───────────────────────────────
+        # ── 3. Sparse retrieval ─ run on routed collection(s), merge results ─────────────────────────────
         t0 = time.time()
         sparse_hits: list[dict] = []
         for col in routed_cols:
@@ -230,10 +228,9 @@ class RAGPipeline:
         self._log(f"[3] Sparse → {len(sparse_hits)} hits  ({latency['sparse']:.0f}ms)")
 
         # ── 4. Merge + Rerank ─────────────────────────────────────────
-        combined_chunk_texts = {
-            **self._chunk_texts[routed_cols[0]],
-            **self._chunk_texts[routed_cols[1]],
-        }
+        combined_chunk_texts: dict[str, str] = {}
+        for col in routed_cols:
+            combined_chunk_texts.update(self._chunk_texts[col])
         candidates = merge_results(dense_hits, sparse_hits)
         t0 = time.time()
         reranked = rerank(
@@ -310,16 +307,21 @@ class RAGPipeline:
         if self.verbose:
             print(msg)
 
-    def _ensure_two_collections(self, cols: list[str]) -> list[str]:
+    def _normalize_collections(self, cols: list[str]) -> list[str]:
+        """Return two allowed collections (unique, ordered); fallback to first two configured."""
         cleaned: list[str] = []
         for col in cols:
             up = str(col).strip().upper()
             if up in self.collections and up not in cleaned:
                 cleaned.append(up)
+            if len(cleaned) == 2:
+                break
 
-        if len(cleaned) >= 2:
-            return cleaned[:2]
-        if len(cleaned) == 1:
-            backup = next((x for x in self.collections if x != cleaned[0]), self.collections[0])
-            return [cleaned[0], backup]
-        return self.collections[:2]
+        if not cleaned:
+            cleaned = self.collections[:2]
+        elif len(cleaned) == 1:
+            for col in self.collections:
+                if col not in cleaned:
+                    cleaned.append(col)
+                    break
+        return cleaned[:2]

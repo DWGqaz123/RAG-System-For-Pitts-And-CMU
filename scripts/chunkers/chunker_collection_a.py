@@ -58,7 +58,7 @@ import html
 # Config
 # ──────────────────────────────────────────────
 
-PROCESSED_DIR = Path("data/processed")
+PROCESSED_DIR = Path("data/processed/A")
 RAW_WIKI_DIR  = Path("data/raw/A/wikipedias_base_line")
 DOCS_PATH     = PROCESSED_DIR / "A_docs.jsonl"
 CHUNKS_PATH   = PROCESSED_DIR / "A_chunks.jsonl"
@@ -183,7 +183,7 @@ def _decode_entity(m: re.Match) -> str:
         return chr(int(name[2:], 16))
     if name.startswith("#"):
         return chr(int(name[1:]))
-    return _HTML_ENTITIES.get(name.lower(), m.group(0))
+    return _HTML_ENTITIES.get(name.lower(), m.group(0)) or m.group(0)
 
 
 def _parse_frontmatter(raw: str) -> tuple[dict, str]:
@@ -198,7 +198,7 @@ def _parse_frontmatter(raw: str) -> tuple[dict, str]:
     return meta, raw[m.end():]
 
 
-def clean_wiki_markdown(text: str) -> str:
+def clean_wiki_markdown(text: str) -> str | None:
     """Light cleaning: strip links/urls/entities, keep anchor text."""
     text = _IMG_RE.sub("", text)
     for _ in range(5):
@@ -592,8 +592,8 @@ def run_wiki_pipeline(file_filter: str = "", append: bool = False,
 def main() -> None:
     parser = argparse.ArgumentParser(description="Chunk Collection A data")
     parser.add_argument(
-        "--from-wiki", action="store_true",
-        help="Clean raw wiki markdown then chunk (data/raw/A/wikipedias_base_line)"
+           "--from-wiki", action="store_true",
+           help="Clean raw wiki markdown then chunk (data/raw/A/wikipedias_base_line)"
     )
     parser.add_argument(
         "--file", type=str, default="",

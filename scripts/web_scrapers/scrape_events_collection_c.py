@@ -29,8 +29,8 @@ import requests
 # Section: Configuration.
 
 BASE_URL      = "https://api.firecrawl.dev/v1"
-RAW_DIR       = Path("data/raw")
-PROCESSED_DIR = Path("data/processed")
+RAW_DIR       = Path("data/raw/C")
+PROCESSED_DIR = Path("data/processed/C")
 RAW_DIR.mkdir(parents=True, exist_ok=True)
 PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
 

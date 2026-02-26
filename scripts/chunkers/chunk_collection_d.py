@@ -27,8 +27,8 @@ Output format (text field)
 
 Output files
 ------------
-    data/processed/D_docs.jsonl    (one record per .md file)
-    data/processed/D_chunks.jsonl  (one record per section/chunk)
+    data/processed/D/D_docs.jsonl    (one record per .md file)
+    data/processed/D/D_chunks.jsonl  (one record per section/chunk)
 
 Usage
 -----
@@ -48,8 +48,8 @@ from pathlib import Path
 # ---------------------------------------------------------------------------
 
 PROCESSED_D_DIR = Path("data/processed/D")
-OUT_DOCS        = Path("data/processed/D_docs.jsonl")
-OUT_CHUNKS      = Path("data/processed/D_chunks.jsonl")
+OUT_DOCS        = Path("data/processed/D/D_docs.jsonl")
+OUT_CHUNKS      = Path("data/processed/D/D_chunks.jsonl")
 
 # Chunking parameters
 SPLIT_LEVELS   = {1, 2, 3}   # Split on H1/H2/H3

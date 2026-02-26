@@ -1,42 +1,20 @@
 """
 reranker.py
 -----------
-Merge dense (FAISS) and sparse (BM25s) retrieval results, deduplicate,
-then rerank using BAAI/bge-reranker-v2-m3 
+Merge dense (FAISS) and sparse (BM25) retrieval results, deduplicate,
+then rerank with a local cross-encoder (BAAI/bge-reranker-v2-m3).
 
-No local model is loaded. All scoring is done remotely — zero local RAM
-beyond the candidate metadata dicts (~KB range).
-
-Pipeline
---------
-    dense_results + sparse_results
-      → merge & deduplicate on chunk_id
-      → look up 'text' from {collection}_chunks.jsonl
-      → POST [(query, text), ...] to HF API  (batched, ≤32 pairs/request)
-      → sigmoid(logits) → relevance scores in [0, 1]
-      → return top-10 sorted by reranker score
-
-API format
-----------
-    POST https://api-inference.huggingface.co/models/BAAI/bge-reranker-v2-m3
-    Headers: Authorization: Bearer {HF_TOKEN}
-    Body:    {"inputs": [[query, passage1], [query, passage2], ...]}
-    Returns: list of floats (raw logits) — we apply sigmoid
-
-Usage
------
-    from reranker import load_reranker, merge_results, rerank
-
-    reranker = load_reranker()          # just stores token + URL, no model load
-    candidates = merge_results(dense_hits, sparse_hits)
-    hits = rerank(query, candidates, reranker, chunk_texts, top_n=10)
+Pipeline (summary):
+  dense_results + sparse_results
+    → merge & deduplicate on chunk_id
+    → look up 'text' from {collection}_chunks.jsonl
+    → score with cross-encoder (batched, ≤32 pairs)
+    → sigmoid(logits) → relevance scores in [0, 1]
+    → return top-n by rerank score
 """
 
-# reranker.py 顶部新增 import（替换掉原来的 requests import）
 import json
 import math
-import os
-import time
 from pathlib import Path
 
 import torch
@@ -46,18 +24,16 @@ from transformers import AutoModelForSequenceClassification, AutoTokenizer
 # Paths & defaults
 # ---------------------------------------------------------------------------
 
-PROCESSED_DIR    = Path("data/processed")
-RERANKER_MODEL   = "BAAI/bge-reranker-v2-m3"
-HF_API_URL       = "https://api-inference.huggingface.co/models/{model}"
-TOP_K_RETRIEVAL  = 20
-TOP_N_RERANK     = 10
-API_BATCH_SIZE   = 32    # pairs per POST request (HF serverless limit)
-API_TIMEOUT      = 60    # seconds
-MAX_PASSAGE_CHARS = 1500  # truncate passages before sending to API
+PROCESSED_DIR     = Path("data/processed")
+RERANKER_MODEL    = "BAAI/bge-reranker-v2-m3"
+TOP_K_RETRIEVAL   = 20
+TOP_N_RERANK      = 10
+API_BATCH_SIZE    = 32    # pairs per batch
+MAX_PASSAGE_CHARS = 1500  # truncate passages before scoring
 
 
 # ---------------------------------------------------------------------------
-# Sigmoid (no torch needed)
+# Sigmoid
 # ---------------------------------------------------------------------------
 
 def _sigmoid(x: float) -> float:
@@ -69,10 +45,8 @@ def _sigmoid(x: float) -> float:
 # ---------------------------------------------------------------------------
 
 class HFReranker:
-    """
-    本地 cross-encoder，使用 BAAI/bge-reranker-v2-m3。
-    自动选择 MPS（Apple Silicon）> CUDA > CPU。
-    """
+    """Local cross-encoder using BAAI/bge-reranker-v2-m3.
+    Chooses device priority: MPS (Apple Silicon) > CUDA > CPU."""
 
     def __init__(
         self,
@@ -82,7 +56,7 @@ class HFReranker:
     ) -> None:
         self.model_name = model_name
 
-        # 设备选择
+        # Device selection
         if device:
             self.device = torch.device(device)
         elif torch.backends.mps.is_available():
@@ -102,10 +76,8 @@ class HFReranker:
         ).to(self.device).eval()
 
     def compute_scores(self, pairs: list[tuple[str, str]]) -> list[float]:
-        """
-        对 (query, passage) pairs 打分，返回 sigmoid 归一化后的 [0,1] 分数。
-        分批处理，每批 API_BATCH_SIZE 条。
-        """
+        """Score (query, passage) pairs, returning sigmoid-normalized [0,1] scores.
+        Processed in batches of API_BATCH_SIZE."""
         all_scores: list[float] = []
         for i in range(0, len(pairs), API_BATCH_SIZE):
             batch = pairs[i : i + API_BATCH_SIZE]
@@ -126,7 +98,7 @@ class HFReranker:
 
         # MPS/CUDA tensor → CPU → numpy → python float
         logits_cpu = logits.float().cpu().tolist()
-        if isinstance(logits_cpu, float):          # batch_size=1 的情况
+        if isinstance(logits_cpu, float):          # batch_size=1 case
             logits_cpu = [logits_cpu]
         return [_sigmoid(x) for x in logits_cpu]
 
@@ -138,9 +110,9 @@ def load_reranker(
     model_name: str = RERANKER_MODEL,
     device: str | None = None,
     use_fp16: bool = False,
-    token: str | None = None,   # 保留参数，本地模式无需 token
+    token: str | None = None,   # kept for API parity; not used locally
 ) -> HFReranker:
-    print(f"  Reranker        : {model_name}  (本地推理)")
+    print(f"  Reranker        : {model_name}  (local inference)")
     return HFReranker(model_name=model_name, device=device, use_fp16=use_fp16)
 
 

@@ -1,5 +1,8 @@
 .env
 data/
+test/
+system_output/
+system_outputs/
 __pycache__/
 *.pyc
 venv/

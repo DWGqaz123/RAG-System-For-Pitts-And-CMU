@@ -20,10 +20,10 @@ Two sources, two parsers, one unified output schema:
 Both parsers emit chunk dicts with the same schema, including an
 'event_date' ISO field for hard date-range pre-filtering.
 
-Output:
-    data/processed/C_chunks.jsonl
-
-Usage (import in notebook):
+Output
+-------
+    data/processed/C/C_docs.jsonl
+    data/processed/C/C_chunks.jsonl
     from chunk_collection_c_pgh_events import chunk_collection_c
     chunks = chunk_collection_c()
 """
@@ -36,7 +36,7 @@ from pathlib import Path
 
 # Config
 
-PROCESSED_DIR = Path("data/processed")
+PROCESSED_DIR = Path("data/processed/C")
 
 PGH_MONTHS = [
     "march", "april", "may", "june", "july",

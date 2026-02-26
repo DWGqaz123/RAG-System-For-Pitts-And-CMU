@@ -21,10 +21,10 @@ Two documents, two strategies:
 Both chunkers produce records with the same schema so they can be merged
 into a single B_chunks.jsonl.
 
-Output:
-    data/processed/B_chunks.jsonl
-
-Usage:
+Output
+------
+    data/processed/B/B_docs.jsonl
+    data/processed/B/B_chunks.jsonl
     from chunk_collection_b import chunk_collection_b
     chunks = chunk_collection_b()
 """
@@ -36,7 +36,7 @@ from pathlib import Path
 
 # Config
 
-PROCESSED_DIR = Path("data/processed")
+PROCESSED_DIR = Path("data/processed/B")
 
 DOC_TAX = {
     "doc_id":     "B_payroll_tax_regulations",

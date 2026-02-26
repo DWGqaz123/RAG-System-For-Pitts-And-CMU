@@ -2,8 +2,8 @@
 scrape_visitpittsburgh.py
 -------------------------
 Scrape VisitPittsburgh pages with Firecrawl.
-Save raw markdown to `scraped_data/raw/`.
-Save cleaned markdown to `scraped_data/processed/`.
+Save raw markdown to `data/raw/A`.
+Save cleaned markdown to `data/processed/A`.
 
 Usage:
     from scrape_visitpittsburgh import scrape_all, TARGETS
@@ -21,8 +21,8 @@ import requests
 
 BASE_URL = "https://api.firecrawl.dev/v1"
 
-RAW_DIR       = Path("scraped_data/raw")
-PROCESSED_DIR = Path("scraped_data/processed")
+RAW_DIR       = Path("data/raw/A")
+PROCESSED_DIR = Path("data/processed/A")
 RAW_DIR.mkdir(parents=True, exist_ok=True)
 PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
 

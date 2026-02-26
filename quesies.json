@@ -1,0 +1,1602 @@
+[
+    {
+        "question": "What year did Pittsburgh suffer its worst flood?",
+        "id": "1"
+    },
+    {
+        "question": "When did the Carnegie-Mellon merger occur?",
+        "id": "2"
+    },
+    {
+        "question": "What Kennywood food is most iconic?",
+        "id": "3"
+    },
+    {
+        "question": "How many schools and colleges does CMU have?",
+        "id": "4"
+    },
+    {
+        "question": "What former church is a music venue?",
+        "id": "5"
+    },
+    {
+        "question": "What year does Pittsburgh host NFL Draft?",
+        "id": "6"
+    },
+    {
+        "question": "What is the area in square miles of Squirrel Hill as stated by the Squirrel Hill Historical Society?",
+        "id": "7"
+    },
+    {
+        "question": "In what year did Carnegie Institute of Technology merge with the Mellon Institute to form Carnegie Mellon University?",
+        "id": "8"
+    },
+    {
+        "question": "What year was the Whiskey Rebellion?",
+        "id": "9"
+    },
+    {
+        "question": "In what year was the Frick Environmental Center opened to the public?",
+        "id": "10"
+    },
+    {
+        "question": "When is fourth quarter Payroll Tax due in Pittsburgh?",
+        "id": "11"
+    },
+    {
+        "question": "What is Pittsburgh's business district called?",
+        "id": "12"
+    },
+    {
+        "question": "What street is the City-County Building on?",
+        "id": "13"
+    },
+    {
+        "question": "Who founded Carnegie Technical Schools?",
+        "id": "14"
+    },
+    {
+        "question": "What is Pittsburgh's Earned Income Tax revenue?",
+        "id": "15"
+    },
+    {
+        "question": "What county is Pittsburgh the seat of?",
+        "id": "16"
+    },
+    {
+        "question": "On what date was the Sixth Street Bridge formally renamed the Roberto Clemente Bridge?",
+        "id": "17"
+    },
+    {
+        "question": "What is Pittsburgh's Payroll Expense Tax rate?",
+        "id": "18"
+    },
+    {
+        "question": "How many wholesale produce dealers were in the Strip District in the 1950s?",
+        "id": "19"
+    },
+    {
+        "question": "How many people died in the Allegheny Arsenal explosion during the Civil War?",
+        "id": "20"
+    },
+    {
+        "question": "What is Pittsburgh's Real Estate Tax revenue?",
+        "id": "21"
+    },
+    {
+        "question": "What year did CMU's Computer Science Department receive a $5 million grant from the Richard K. Mellon Foundation to formally establish the department?",
+        "id": "22"
+    },
+    {
+        "question": "On what date did Frick Park officially open to the public?",
+        "id": "23"
+    },
+    {
+        "question": "How many members serve on Pittsburgh City Council?",
+        "id": "24"
+    },
+    {
+        "question": "When was Carnegie Mellon founded?",
+        "id": "25"
+    },
+    {
+        "question": "When was Andrew Mellon's birth year?",
+        "id": "26"
+    },
+    {
+        "question": "What company built the current Roberto Clemente Bridge?",
+        "id": "27"
+    },
+    {
+        "question": "What park is Downtown Pittsburgh's state park?",
+        "id": "28"
+    },
+    {
+        "question": "How long is the Ohio River from Pittsburgh to where it meets the Mississippi River?",
+        "id": "29"
+    },
+    {
+        "question": "When was the School of Computer Science opened?",
+        "id": "30"
+    },
+    {
+        "question": "What is the address of Randyland in Pittsburgh?",
+        "id": "31"
+    },
+    {
+        "question": "What are Pittsburgh's team colors?",
+        "id": "32"
+    },
+    {
+        "question": "What is the income threshold below which employees are exempt from Pittsburgh's Local Services Tax in 2025?",
+        "id": "33"
+    },
+    {
+        "question": "When did the Senator John Heinz History Center open in the Strip District?",
+        "id": "34"
+    },
+    {
+        "question": "How many firefighters are budgeted in Pittsburgh?",
+        "id": "35"
+    },
+    {
+        "question": "Who founded the Pittsburgh Steelers?",
+        "id": "36"
+    },
+    {
+        "question": "What year was the Pittsburgh Academy founded?",
+        "id": "37"
+    },
+    {
+        "question": "When did the first IBM computer arrive on campus?",
+        "id": "38"
+    },
+    {
+        "question": "In what year was the Strip Historic District designated by the National Park Service?",
+        "id": "39"
+    },
+    {
+        "question": "When did Carnegie Tech begin granting bachelor's degrees?",
+        "id": "40"
+    },
+    {
+        "question": "How many square miles is Pittsburgh?",
+        "id": "41"
+    },
+    {
+        "question": "What is Pittsburgh's nickname related to steel?",
+        "id": "42"
+    },
+    {
+        "question": "What is the exact length of the CMU Buggy race course in miles?",
+        "id": "43"
+    },
+    {
+        "question": "When is third quarter LST due in Pittsburgh?",
+        "id": "44"
+    },
+    {
+        "question": "What is Pittsburgh's Payroll Preparation Tax rate?",
+        "id": "45"
+    },
+    {
+        "question": "In what year were railroad tracks removed from Liberty Avenue downtown causing produce merchants to relocate to the Strip District?",
+        "id": "46"
+    },
+    {
+        "question": "What neighborhood does Mayor Gainey live in?",
+        "id": "47"
+    },
+    {
+        "question": "What Pittsburgh stadium has capacity 68400?",
+        "id": "48"
+    },
+    {
+        "question": "What year did the Steelers change their name?",
+        "id": "49"
+    },
+    {
+        "question": "How many theater performances occur annually?",
+        "id": "50"
+    },
+    {
+        "question": "What is America's number one history museum?",
+        "id": "51"
+    },
+    {
+        "question": "How many neighborhoods does Pittsburgh have?",
+        "id": "52"
+    },
+    {
+        "question": "How many Downtown Pittsburgh restaurants exist?",
+        "id": "53"
+    },
+    {
+        "question": "When is fourth quarter LST due in Pittsburgh?",
+        "id": "54"
+    },
+    {
+        "question": "What is the current total acreage of Frick Park?",
+        "id": "55"
+    },
+    {
+        "question": "On what date did UPMC Children's Hospital of Pittsburgh open its new facility in Lawrenceville?",
+        "id": "56"
+    },
+    {
+        "question": "What is Pittsburgh's real estate tax rate?",
+        "id": "57"
+    },
+    {
+        "question": "What institution merged with Carnegie Tech?",
+        "id": "58"
+    },
+    {
+        "question": "In what year was the School of Computer Science established at Carnegie Mellon University?",
+        "id": "59"
+    },
+    {
+        "question": "What merged with Carnegie Tech in 1967?",
+        "id": "60"
+    },
+    {
+        "question": "What Eastern European food is Pittsburgh famous for?",
+        "id": "61"
+    },
+    {
+        "question": "On what date did Phipps Conservatory open to the public?",
+        "id": "62"
+    },
+    {
+        "question": "How many City Council members are in Pittsburgh?",
+        "id": "63"
+    },
+    {
+        "question": "When was Pittsburgh laid out?",
+        "id": "64"
+    },
+    {
+        "question": "When is third quarter Payroll Tax due in Pittsburgh?",
+        "id": "65"
+    },
+    {
+        "question": "How many acres is Carnegie Mellon's main campus?",
+        "id": "66"
+    },
+    {
+        "question": "What Grammy-winning orchestra performs in Pittsburgh?",
+        "id": "67"
+    },
+    {
+        "question": "What is the length of the Duquesne Incline in feet?",
+        "id": "68"
+    },
+    {
+        "question": "In what year did the Boulevard of the Allies open providing a direct link from Squirrel Hill to downtown Pittsburgh?",
+        "id": "69"
+    },
+    {
+        "question": "Who laid out Pittsburgh in 1764?",
+        "id": "70"
+    },
+    {
+        "question": "How many independently elected citywide offices exist in Pittsburgh?",
+        "id": "71"
+    },
+    {
+        "question": "When was Pittsburgh incorporated as a city?",
+        "id": "72"
+    },
+    {
+        "question": "When did the Great Fire of Pittsburgh occur?",
+        "id": "73"
+    },
+    {
+        "question": "How many stories is Cathedral of Learning?",
+        "id": "74"
+    },
+    {
+        "question": "Who was Pittsburgh named for?",
+        "id": "75"
+    },
+    {
+        "question": "In what year was the current Roberto Clemente Bridge built?",
+        "id": "76"
+    },
+    {
+        "question": "What museum has the largest Warhol collection?",
+        "id": "77"
+    },
+    {
+        "question": "What was the original name in 1900?",
+        "id": "78"
+    },
+    {
+        "question": "What year was Pittsburgh incorporated as a city?",
+        "id": "79"
+    },
+    {
+        "question": "Who expelled the French in 1758?",
+        "id": "80"
+    },
+    {
+        "question": "What year was glass manufacture begun in Pittsburgh?",
+        "id": "81"
+    },
+    {
+        "question": "What festival is named number one in Pittsburgh?",
+        "id": "82"
+    },
+    {
+        "question": "What museum features Roberto Clemente memorabilia?",
+        "id": "83"
+    },
+    {
+        "question": "When is first quarter Payroll Tax due in Pittsburgh?",
+        "id": "84"
+    },
+    {
+        "question": "When is first quarter LST due in Pittsburgh?",
+        "id": "85"
+    },
+    {
+        "question": "What year did Randyland's creator Randy Gilson purchase the property at 1501 Arch Street?",
+        "id": "86"
+    },
+    {
+        "question": "On what date did the Duquesne Incline open to the public?",
+        "id": "87"
+    },
+    {
+        "question": "What's the minimum income for Pittsburgh's LST exemption?",
+        "id": "88"
+    },
+    {
+        "question": "Who is Pittsburgh's current mayor?",
+        "id": "89"
+    },
+    {
+        "question": "When was Fort Pitt built?",
+        "id": "90"
+    },
+    {
+        "question": "What year did steel production begin in Pittsburgh?",
+        "id": "91"
+    },
+    {
+        "question": "What is Pitt's most notable building?",
+        "id": "92"
+    },
+    {
+        "question": "What is Pittsburgh's 2025 operating budget?",
+        "id": "93"
+    },
+    {
+        "question": "What Pittsburgh condiment is most famous?",
+        "id": "94"
+    },
+    {
+        "question": "How many departments are in Pittsburgh's budget?",
+        "id": "95"
+    },
+    {
+        "question": "What were the Steelers originally called?",
+        "id": "96"
+    },
+    {
+        "question": "What is Kennywood's oldest surviving ride and when did it open?",
+        "id": "97"
+    },
+    {
+        "question": "When did Pittsburgh's population reach 321616?",
+        "id": "98"
+    },
+    {
+        "question": "What North Shore venue hosts concerts?",
+        "id": "99"
+    },
+    {
+        "question": "When was the Pennsylvania Railroad Fruit Auction & Sales Building in the Strip District constructed?",
+        "id": "100"
+    },
+    {
+        "question": "Where are artists in residence at Mattress Factory likely to live?",
+        "id": "101"
+    },
+    {
+        "question": "Who opened the 'palace of culture' in 1895",
+        "id": "102"
+    },
+    {
+        "question": "\"What organization did the Pittsburgh Post Gazette laud as \"\"\"\"the single greatest creative force in Pittsburgh because of its spirit of reinvention\"\"\"\"?\"",
+        "id": "103"
+    },
+    {
+        "question": "Are photos allowed during Pittsburgh symphony orchestra performances?",
+        "id": "104"
+    },
+    {
+        "question": "Which submarine is in the Ohio river beside downtown Pittsburgh?",
+        "id": "105"
+    },
+    {
+        "question": "Which is the most comprehensive single-artist museum in the world?",
+        "id": "106"
+    },
+    {
+        "question": "In which neighborhood is the History Center in Pittsburgh currently located?",
+        "id": "107"
+    },
+    {
+        "question": "How to find the Carnegie Museum of Art on youtube (username)?",
+        "id": "108"
+    },
+    {
+        "question": "What NFL Films documentary is screening at the Kamin Science Center's Rangos Giant Cinema in the lead-up to the 2026 NFL Draft?",
+        "id": "109"
+    },
+    {
+        "question": "\"The famous pop art painting \"\"\"\"Campbell's Soup Cans\"\"\"\" is on display in what Pittsburgh museum?\"",
+        "id": "110"
+    },
+    {
+        "question": "What is Pittsburgh's most visted museum?",
+        "id": "111"
+    },
+    {
+        "question": "Who should I contact to ask about auditions to join the Chorus for the 2026-27 season of the Pittsburgh Opera?",
+        "id": "112"
+    },
+    {
+        "question": "What did the Heinz history Center open in 2014?",
+        "id": "113"
+    },
+    {
+        "question": "In which PSO corporate partnership tier is Lighthouse Electric?",
+        "id": "114"
+    },
+    {
+        "question": "How much does it cost to attend the Heinz History Center with a student ID?",
+        "id": "115"
+    },
+    {
+        "question": "Who is the conductor leading the Pittsburgh Symphony Orchestra concert \"\"\"\"The Rite of Spring\"\"\"\" at Heinz Hall on April 12 2026?",
+        "id": "116"
+    },
+    {
+        "question": "Who is the lead concertmaster for the pittsburgh symphony orchestra?",
+        "id": "117"
+    },
+    {
+        "question": "Which Pittsburgh museum displays contemporary Jewish art?",
+        "id": "118"
+    },
+    {
+        "question": "Where is Charles \"\"\"\"Teenie\"\"\"\" Harris' Archive currently on exhibit?",
+        "id": "119"
+    },
+    {
+        "question": "Polar World is the largest exhibit on what society?",
+        "id": "120"
+    },
+    {
+        "question": "What's the Heinz history center's Instragram handle?",
+        "id": "121"
+    },
+    {
+        "question": "Who is the President and CEO of the August Wilson African American Cultural Center?",
+        "id": "122"
+    },
+    {
+        "question": "On how many days of the week is the Detre Library & Archives open?",
+        "id": "123"
+    },
+    {
+        "question": "Does the pittsburgh symphony orchestra have more first or second chair violinists?",
+        "id": "124"
+    },
+    {
+        "question": "Is there a strict dress code at the Pittsburgh Opera?",
+        "id": "125"
+    },
+    {
+        "question": "What time does the laser cutting 101 event at Kamin Science Center start on March 20 2026?",
+        "id": "126"
+    },
+    {
+        "question": "On a typical day at the Frick when are the Clayton Tours available?",
+        "id": "127"
+    },
+    {
+        "question": "How many architecture related objects are in the Heinz Architectural center's collection?",
+        "id": "128"
+    },
+    {
+        "question": "In what neighborhood is the Clemenete museum located?",
+        "id": "129"
+    },
+    {
+        "question": "In which year did the Powdermill Nature Reserve open?",
+        "id": "130"
+    },
+    {
+        "question": "What is the title of the individual who wins Picklesburgh's pickle juice drinking competition?",
+        "id": "131"
+    },
+    {
+        "question": "On what ancestral lands does the Frick Pittsburgh occupy?",
+        "id": "132"
+    },
+    {
+        "question": "How many contrabassoonists are in the pittsburgh orchestra?",
+        "id": "133"
+    },
+    {
+        "question": "How may books, pamphlets, and monographs does the Detre Library & Archives have in its collection?",
+        "id": "134"
+    },
+    {
+        "question": "What nickname was given to the first dinosaur fossil added to the Carnegie Museum's collection?",
+        "id": "135"
+    },
+    {
+        "question": "What is a supernumerary?",
+        "id": "136"
+    },
+    {
+        "question": "In what year did old residents of Pittsburgh and Western PA establish a society to help preserve local history?",
+        "id": "137"
+    },
+    {
+        "question": "Which of the following is not a real learning program associated witht he Pittsburgh symphony orchestra? Side-by-Side, Schooltime, Play Your Heart Out, Fiddlesticks Musical Exploration",
+        "id": "138"
+    },
+    {
+        "question": "What is the phone number for the Kamin Science Center's special events team?",
+        "id": "139"
+    },
+    {
+        "question": "How tall was the first dinosaur fossil added to the Carnegie Museum's collection?",
+        "id": "140"
+    },
+    {
+        "question": "Who is the secretary officer on the Pittsburgh Cultural Trust Board of Trustees",
+        "id": "141"
+    },
+    {
+        "question": "When was the Heinz Architectural Center created?",
+        "id": "142"
+    },
+    {
+        "question": "Who founded the Mattress Factory?",
+        "id": "143"
+    },
+    {
+        "question": "Who is the President of the Carnegie Museums?",
+        "id": "144"
+    },
+    {
+        "question": "In what year did Carnegie Museum's most ambitious period of growth begin?",
+        "id": "145"
+    },
+    {
+        "question": "\"What is the street address of Pittsburgh's \"\"\"\"People Museum\"\"\"\"?\"",
+        "id": "146"
+    },
+    {
+        "question": "Artists from which country exhibited their work at Mattress Factory despite denial of the artists' entry into the  U.S?",
+        "id": "147"
+    },
+    {
+        "question": "What three-day event does Pitt Athletics host at Arts Landing during the 2026 NFL Draft weekend?",
+        "id": "148"
+    },
+    {
+        "question": "Who do I contact to discuss accessibility accomodations for volunteers at the PSO?",
+        "id": "149"
+    },
+    {
+        "question": "Which Pittsburgh museum is dedicated to model trains?",
+        "id": "150"
+    },
+    {
+        "question": "When was Carnegie Museums' centennial?",
+        "id": "151"
+    },
+    {
+        "question": "In what year was Dinosaur Hall unveiled?",
+        "id": "152"
+    },
+    {
+        "question": "Which biblically-related production does Pittsburgh Opera rent out?",
+        "id": "153"
+    },
+    {
+        "question": "Who is the chair of the board for the Frick?",
+        "id": "154"
+    },
+    {
+        "question": "How much money did the Carnegie Museum's raise in the Building the Future Campaign?",
+        "id": "155"
+    },
+    {
+        "question": "What is Powdermill Nature reserve named after?",
+        "id": "156"
+    },
+    {
+        "question": "What is Amanda Dunyak Gillen's role at The Frick?",
+        "id": "157"
+    },
+    {
+        "question": "The Heinz History Center is affiliated with which federal institution?",
+        "id": "158"
+    },
+    {
+        "question": "When did Roberto Clemente join the Pittsburgh Pirates?",
+        "id": "159"
+    },
+    {
+        "question": "What is the square footage of the George R. White opera studio?",
+        "id": "160"
+    },
+    {
+        "question": "\"The Writer's Landscape\"\"\"\" is a perminent exhibition in downtown Pittsburgh about whom?\"",
+        "id": "161"
+    },
+    {
+        "question": "Who financed the Heinz Architectural Center at its launch?",
+        "id": "162"
+    },
+    {
+        "question": "What major architectural center opened in Pittsburgh in 1993?",
+        "id": "163"
+    },
+    {
+        "question": "Which Pittsburgh concert venue is located next to Acrisure Stadium?",
+        "id": "164"
+    },
+    {
+        "question": "What type of dinosaur fossil was the first added to the Carnegie Museum's collection?",
+        "id": "165"
+    },
+    {
+        "question": "How many days does JFilm Festival last?",
+        "id": "166"
+    },
+    {
+        "question": "Who is the music director of the Pittsburgh orchestra?",
+        "id": "167"
+    },
+    {
+        "question": "What is the age cutoff for free tickets at the Heinz History Center?",
+        "id": "168"
+    },
+    {
+        "question": "How many guests does PointView Hall fit in theater seating?",
+        "id": "169"
+    },
+    {
+        "question": "How many city blocks does Pittsburgh's Cultural District span?",
+        "id": "170"
+    },
+    {
+        "question": "What is the theme of Pittsburgh Ballet Theatre's 2025-2026 season?",
+        "id": "171"
+    },
+    {
+        "question": "What was the name of the mattress warehouse that becamse Mattress Factory's first site in 1975?",
+        "id": "172"
+    },
+    {
+        "question": "\"Artifacts from what famous TV set are displayed at Pittsburgh's \"\"\"\"People Museum\"\"\"\"?\"",
+        "id": "173"
+    },
+    {
+        "question": "Which exhibit at Kamin Science Center features replicas of fictional robots that inspired real-world creations?",
+        "id": "174"
+    },
+    {
+        "question": "How may photographs, prints, and negatives does the Detre Library & Archives have in its collection?",
+        "id": "175"
+    },
+    {
+        "question": "In what month will Chorus auditions take place for the Pittsburgh Opera's 2026-27 season?",
+        "id": "176"
+    },
+    {
+        "question": "In what year was the pop district in Pittsburgh launched?",
+        "id": "177"
+    },
+    {
+        "question": "Who is the current General Director of the Pittsburgh Opera?",
+        "id": "178"
+    },
+    {
+        "question": "Who became Co-Director of Mattress Factory in 2008?",
+        "id": "179"
+    },
+    {
+        "question": "Does the PSO offer any discounts for program handbook advertisers?",
+        "id": "180"
+    },
+    {
+        "question": "At which venue does the Pittsburgh Opera present its largest productions?",
+        "id": "181"
+    },
+    {
+        "question": "What is the name of the new four-acre civic space in Pittsburgh's Cultural District debuting during the 2026 NFL Draft?",
+        "id": "182"
+    },
+    {
+        "question": "What does 'Acupuncture' refer to in the context of the Pittsburgh skyline?",
+        "id": "183"
+    },
+    {
+        "question": "What are the two types of space rentals available through the Pittsburgh Cultural Trust?",
+        "id": "184"
+    },
+    {
+        "question": "What is the starting price for a children's ticket to one of the Pittsburgh Opera's mainstage shows?",
+        "id": "185"
+    },
+    {
+        "question": "The Frick Pittsburgh is located in which neighborhood?",
+        "id": "186"
+    },
+    {
+        "question": "What is Pennsylvania's largest history museum?",
+        "id": "187"
+    },
+    {
+        "question": "When was Mattress Factory founded?",
+        "id": "188"
+    },
+    {
+        "question": "What is the first step for renting the AWAACC?",
+        "id": "189"
+    },
+    {
+        "question": "What is the Clemente Museum's instagram handle?",
+        "id": "190"
+    },
+    {
+        "question": "What is the street address of Pittsburgh's Mattress Factory?",
+        "id": "191"
+    },
+    {
+        "question": "Does Pittsburgh's Detre Library & Archives hold more periodicals or maps?",
+        "id": "192"
+    },
+    {
+        "question": "In what year did Warhol obtain his first film camera?",
+        "id": "193"
+    },
+    {
+        "question": "How many photographs are in the Warhol museum?",
+        "id": "194"
+    },
+    {
+        "question": "What is Guidestar's rating for the Pittsburgh Opera?",
+        "id": "195"
+    },
+    {
+        "question": "What did the Historical Society of Pittsburgh celebrate in 1908?",
+        "id": "196"
+    },
+    {
+        "question": "How does the Mattress Factory define artistic quality?",
+        "id": "197"
+    },
+    {
+        "question": "How many seats are in the Buhl Planetarium?",
+        "id": "198"
+    },
+    {
+        "question": "\"The oldest car of what make (brand) is located at Pittsburgh's \"\"\"\"People Museum\"\"\"\"?\"",
+        "id": "199"
+    },
+    {
+        "question": "In which neighborhood is the Pittsburgh Opera currently located?",
+        "id": "200"
+    },
+    {
+        "question": "What team will Pittsburgh Penguins play against on March 26, 2026?",
+        "id": "201"
+    },
+    {
+        "question": "Which stadium is the Steelers game against the Houston Texans in 2026?",
+        "id": "202"
+    },
+    {
+        "question": "Name three NCAA Division 1 universities in Pittsburgh.",
+        "id": "203"
+    },
+    {
+        "question": "Which city will the game between the Philadelphia Eagles and Pittsburgh Steelers be located in 2026?",
+        "id": "204"
+    },
+    {
+        "question": "What is the seating capacity of Acrisure Stadium?",
+        "id": "205"
+    },
+    {
+        "question": "What are the co-captains for Steelers Style?",
+        "id": "206"
+    },
+    {
+        "question": "Who served as the Pittsburgh Steelers radio color commentator for 35 seasons from 1970 to 2004?",
+        "id": "207"
+    },
+    {
+        "question": "When was the inaugural Hall of Honor class for the Pittsburgh Steelers announced?",
+        "id": "208"
+    },
+    {
+        "question": "What is the nickname of the Pittsburgh Steelers?",
+        "id": "209"
+    },
+    {
+        "question": "How many games are the Penguins scheduled to play in April 2026?",
+        "id": "210"
+    },
+    {
+        "question": "When did the Pittsburgh Steelers play their first playoff game in franchise history?",
+        "id": "211"
+    },
+    {
+        "question": "Who will be the Pittsburgh Steelers\u2019 head coach for the 2026 season?",
+        "id": "212"
+    },
+    {
+        "question": "How many seasons will the 2026 season mark for the Pittsburgh Steelers in the NFL?",
+        "id": "213"
+    },
+    {
+        "question": "Who holds the Pittsburgh Penguins franchise record for most points scored by a defenseman?",
+        "id": "214"
+    },
+    {
+        "question": "At what time does Pitt softball play Boston College on March 20, 2026?",
+        "id": "215"
+    },
+    {
+        "question": "When was The Pirate Parrot mascot introduced for the Pittsburgh Pirates?",
+        "id": "216"
+    },
+    {
+        "question": "What is the name of Pittsburgh\u2019s professional soccer team?",
+        "id": "217"
+    },
+    {
+        "question": "At what date do the Pittsburgh Penguins play the St. Louis Blues in April 2026?",
+        "id": "218"
+    },
+    {
+        "question": "When is the Penguins' traditional Thanksgiving Eve game in 2026?",
+        "id": "219"
+    },
+    {
+        "question": "When did the Steelers Hall of Honor Museum open?",
+        "id": "220"
+    },
+    {
+        "question": "\"When was the nickname \"\"\"\"Pirates\"\"\"\" first acknowledged on the Pittsburgh baseball team's uniforms?\"",
+        "id": "221"
+    },
+    {
+        "question": "What are the official colors of the Pittsburgh Steelers?",
+        "id": "222"
+    },
+    {
+        "question": "When do the Penguins host the Dallas Stars in March 2026?",
+        "id": "223"
+    },
+    {
+        "question": "What team does Penguins host on March 31, 2026?",
+        "id": "224"
+    },
+    {
+        "question": "Are the Penguins playing at home or away on April 9, 2026?",
+        "id": "225"
+    },
+    {
+        "question": "Which Major League Baseball team built a screen at Forbes Field in 1930?",
+        "id": "226"
+    },
+    {
+        "question": "Which city is the Pittsburgh Penguins vs Washington Capitals game on April 12, 2026, being held?",
+        "id": "227"
+    },
+    {
+        "question": "What color is Pittsburgh Steelers' 1933 pants?",
+        "id": "228"
+    },
+    {
+        "question": "Who narrates the NFL Films documentary 'The Football Town' screening at the Kamin Science Center in 2026?",
+        "id": "229"
+    },
+    {
+        "question": "When did the Pittsburgh Steelers move into Heinz Field?",
+        "id": "230"
+    },
+    {
+        "question": "Where will the Steelers play the Baltimore Ravens on the road in 2026?",
+        "id": "231"
+    },
+    {
+        "question": "Who succeeded Chuck Noll as head coach of the Pittsburgh Steelers in 1992?",
+        "id": "232"
+    },
+    {
+        "question": "Who will the Pitt women\u2019s lacrosse team play on April 15, 2026?",
+        "id": "233"
+    },
+    {
+        "question": "What is the name of the baseball park in Pittsburgh known for its spectacular view of the Downtown skyline?",
+        "id": "234"
+    },
+    {
+        "question": "Where will the Pittsburgh Penguins play on April 11, 2026?",
+        "id": "235"
+    },
+    {
+        "question": "What is the address of the Pittsburgh Steelers' Acrisure Stadium?",
+        "id": "236"
+    },
+    {
+        "question": "Which golf course in the Pittsburgh area has hosted the most U.S. Open championships?",
+        "id": "237"
+    },
+    {
+        "question": "Who replaced Steve Mears on the Pittsburgh Penguins radio booth in 2024?",
+        "id": "238"
+    },
+    {
+        "question": "When did the Pittsburgh Penguins win back-to-back Stanley Cup championships?",
+        "id": "239"
+    },
+    {
+        "question": "Who is the manager of the Pittsburgh Pirates?",
+        "id": "240"
+    },
+    {
+        "question": "What is the capacity of Highmark Stadium?",
+        "id": "241"
+    },
+    {
+        "question": "What do the colors in the Pittsburgh Steelers logo represent?",
+        "id": "242"
+    },
+    {
+        "question": "In what year were the Pittsburgh Penguins ice hockey club established?",
+        "id": "243"
+    },
+    {
+        "question": "How many World Series championships have the Pittsburgh Pirates won?",
+        "id": "244"
+    },
+    {
+        "question": "When was the Pittsburgh Passion women's full-contact football team formed?",
+        "id": "245"
+    },
+    {
+        "question": "How many games are on the Steelers schedule 2026?",
+        "id": "246"
+    },
+    {
+        "question": "When will the Riverhounds ownership group start a USL W League team?",
+        "id": "247"
+    },
+    {
+        "question": "What is the Steelers' strength of schedule ranking for 2026?",
+        "id": "248"
+    },
+    {
+        "question": "In which years did the Pittsburgh Penguins win the Stanley Cup championships?",
+        "id": "249"
+    },
+    {
+        "question": "Who created the Terrible Towel for the Pittsburgh Steelers?",
+        "id": "250"
+    },
+    {
+        "question": "Will Steelers play Jacksonville Jaguars at home or on the road?",
+        "id": "251"
+    },
+    {
+        "question": "In what year were the Pittsburgh Pirates established?",
+        "id": "252"
+    },
+    {
+        "question": "When did the Pittsburgh Steelers win their sixth Super Bowl Championship?",
+        "id": "253"
+    },
+    {
+        "question": "Who has been the Pittsburgh Penguins' public address announcer since 2009?",
+        "id": "254"
+    },
+    {
+        "question": "When will the Pittsburgh Penguins relaunch their Hall of Fame?",
+        "id": "255"
+    },
+    {
+        "question": "Name one NCAA Division 1 university located in Pittsburgh.",
+        "id": "256"
+    },
+    {
+        "question": "What is the name of the 24-hour digital radio station that provides non-stop coverage of the Pittsburgh Steelers?",
+        "id": "257"
+    },
+    {
+        "question": "Which university in Pittsburgh is a member of the Atlantic Coast Conference in college football?",
+        "id": "258"
+    },
+    {
+        "question": "Which team will the Steelers play at Raymond James Stadium in 2026?",
+        "id": "259"
+    },
+    {
+        "question": "What are the traditional colors for Pittsburgh sports teams?",
+        "id": "260"
+    },
+    {
+        "question": "Where will the Steelers play the Cincinnati Bengals on the road in 2026?",
+        "id": "261"
+    },
+    {
+        "question": "Which stadium in Cleveland will host the Steelers in 2026?",
+        "id": "262"
+    },
+    {
+        "question": "How can college students get discounted tickets for Pittsburgh Penguins games?",
+        "id": "263"
+    },
+    {
+        "question": "What song is played during the fourth quarter when the Steelers need a big stop?",
+        "id": "264"
+    },
+    {
+        "question": "When did the Three Rivers Stadium open?",
+        "id": "265"
+    },
+    {
+        "question": "Which 2026 Steelers opponent plays at Caesars Superdome?",
+        "id": "266"
+    },
+    {
+        "question": "How many Super Bowl championships have the Pittsburgh Steelers won?",
+        "id": "267"
+    },
+    {
+        "question": "How many times have the Pittsburgh Pirates won the World Series?",
+        "id": "268"
+    },
+    {
+        "question": "Which NFC East team will the Steelers visit in 2026?",
+        "id": "269"
+    },
+    {
+        "question": "When did PPG Paints Arena open?",
+        "id": "270"
+    },
+    {
+        "question": "Where is the Steelers Hall of Honor Museum located?",
+        "id": "271"
+    },
+    {
+        "question": "When did the Pittsburgh Pirates return to the postseason after a 20-season losing record?",
+        "id": "272"
+    },
+    {
+        "question": "How much money have the proceeds from the Terrible Towel helped raise for the school in Coraopolis?",
+        "id": "273"
+    },
+    {
+        "question": "Which Texas-based team will the Steelers host in Pittsburgh in 2026?",
+        "id": "274"
+    },
+    {
+        "question": "What is the address of PNC Park where the Pittsburgh Pirates play?",
+        "id": "275"
+    },
+    {
+        "question": "When is the game between the Buffalo Sabres and Pittsburgh Penguins scheduled?",
+        "id": "276"
+    },
+    {
+        "question": "Which team will the Steelers play at Gillette Stadium in 2026?",
+        "id": "277"
+    },
+    {
+        "question": "What day does Pitt Men's Soccer play against Duquesne in 2026?",
+        "id": "278"
+    },
+    {
+        "question": "When do the Penguins host the Carolina Hurricanes on March 22, 2026?",
+        "id": "279"
+    },
+    {
+        "question": "What is a riverhound a nickname for?",
+        "id": "280"
+    },
+    {
+        "question": "Which Pittsburgh team competes in the Ultimate Frisbee Association?",
+        "id": "281"
+    },
+    {
+        "question": "When were the Pittsburgh Steelers established?",
+        "id": "282"
+    },
+    {
+        "question": "What is the name of the bar closest to PPG Paints Arena that offers a large beer selection and welcomes away team fans?",
+        "id": "283"
+    },
+    {
+        "question": "When is the Pittsburgh Penguins game against the Boston Bruins scheduled in March?",
+        "id": "284"
+    },
+    {
+        "question": "Who was hired as the Pittsburgh Steelers head coach in 1969?",
+        "id": "285"
+    },
+    {
+        "question": "Who will Pitt softball play on March 29, 2026?",
+        "id": "286"
+    },
+    {
+        "question": "When did the Pittsburgh Pirates leave Forbes Field?",
+        "id": "287"
+    },
+    {
+        "question": "When is Pitt\u2019s baseball game against Wake Forest on April 5, 2026?",
+        "id": "288"
+    },
+    {
+        "question": "Who is the General Manager of the Pittsburgh Pirates?",
+        "id": "289"
+    },
+    {
+        "question": "Where can you find the Immaculate Reception Monument to celebrate the Pittsburgh Steelers?",
+        "id": "290"
+    },
+    {
+        "question": "What team will the Penguins face in Stockholm for the Global Series?",
+        "id": "291"
+    },
+    {
+        "question": "When does Pitt men's basketball play UCF in a neutral site game?",
+        "id": "292"
+    },
+    {
+        "question": "When did the Pittsburgh Pirates play their final game at Three Rivers Stadium?",
+        "id": "293"
+    },
+    {
+        "question": "How many Super Bowls have the Pittsburgh Steelers won?",
+        "id": "294"
+    },
+    {
+        "question": "What sport is Pitt hosting on March 25, 2026?",
+        "id": "295"
+    },
+    {
+        "question": "What position does Aaron Rodgers play on the Steelers team?",
+        "id": "296"
+    },
+    {
+        "question": "Where is the Steelers Alumni Weekend Dinner held?",
+        "id": "297"
+    },
+    {
+        "question": "What is the bag policy at Acrisure Stadium on game days?",
+        "id": "298"
+    },
+    {
+        "question": "Where are the home bouts for The Steel Hurtin\u201aThe Steel Beamers, and the Blitzburgh Bombers held?",
+        "id": "299"
+    },
+    {
+        "question": "How much do tickets cost for 'The Football Town' documentary at the Kamin Science Center?",
+        "id": "300"
+    },
+    {
+        "question": "In what year did Anthrocon first move to Pittsburgh?",
+        "id": "301"
+    },
+    {
+        "question": "When was Hunt Institute established?",
+        "id": "302"
+    },
+    {
+        "question": "Where will Pitt play Virginia Tech on October 2, 2026?",
+        "id": "303"
+    },
+    {
+        "question": "Where can students meet with the Voter Engagement Intern on Fridays from 10:15 AM to 12:15 PM?",
+        "id": "304"
+    },
+    {
+        "question": "When does Pittsburgh Ballet Theatre perform A Midsummer Night\u2019s Dream in 2026?",
+        "id": "305"
+    },
+    {
+        "question": "When was the Pittsburgh Great Race first established?",
+        "id": "306"
+    },
+    {
+        "question": "What celebration takes place at the Warhol and Carnegie Museums on October 31, 2026?",
+        "id": "307"
+    },
+    {
+        "question": "What venue has a capacity of 2676 and hosts events in Pittsburgh?",
+        "id": "308"
+    },
+    {
+        "question": "What world premiere opera is being performed at the Bitz Opera Factory on March 6, 2026?",
+        "id": "309"
+    },
+    {
+        "question": "On what dates does CMU Spring Break occur in Spring 2026?",
+        "id": "310"
+    },
+    {
+        "question": "When does Pittsburgh Opera's Time to Act world premiere run in 2026?",
+        "id": "311"
+    },
+    {
+        "question": "What is the length of the UPMC Schenley Oval circuit at the PVGP?",
+        "id": "312"
+    },
+    {
+        "question": "What is the theme for Phipps Spring Flower Show 2026?",
+        "id": "313"
+    },
+    {
+        "question": "What musical runs at the Benedum Center from March 31 to April 5, 2026?",
+        "id": "314"
+    },
+    {
+        "question": "What are the dates for Phipps Spring Flower Show: True Colors in 2026?",
+        "id": "315"
+    },
+    {
+        "question": "What is Mark Godden's ballet featured in Pittsburgh Ballet Theatre's Spring Mix: Premieres (April 10-12, 2026)?",
+        "id": "316"
+    },
+    {
+        "question": "What ballet does Pittsburgh Ballet Theatre perform at the Benedum Center on May 15-17, 2026?",
+        "id": "317"
+    },
+    {
+        "question": "What open mic event happens on the first Monday of every month at 6-8 PM?",
+        "id": "318"
+    },
+    {
+        "question": "What band performs at Roxian Theatre on March 20, 2026?",
+        "id": "319"
+    },
+    {
+        "question": "What two charities does the Pittsburgh Vintage Grand Prix primarily support?",
+        "id": "320"
+    },
+    {
+        "question": "What film score does the Pittsburgh Symphony Orchestra perform live at Heinz Hall on May 1-3, 2026?",
+        "id": "321"
+    },
+    {
+        "question": "On what dates does CMU Spring Carnival take place in Spring 2026?",
+        "id": "322"
+    },
+    {
+        "question": "What musical runs from March 10-15, 2026 at the Benedum Center?",
+        "id": "323"
+    },
+    {
+        "question": "When is CMU Commencement in Spring 2026?",
+        "id": "324"
+    },
+    {
+        "question": "How many stages are dedicated to performances at the Pittsburgh Irish Festival?",
+        "id": "325"
+    },
+    {
+        "question": "What exhibit can you visit at Kamin Science Center that explores the red planet?",
+        "id": "326"
+    },
+    {
+        "question": "What is the last day of CMU Spring 2026 Semester classes?",
+        "id": "327"
+    },
+    {
+        "question": "When does Pittsburgh Ballet Theatre perform The Nutcracker in 2026?",
+        "id": "328"
+    },
+    {
+        "question": "What is the name of the Cultural District Gallery Crawl event at the August Wilson African American Cultural Center on March 27, 2026?",
+        "id": "329"
+    },
+    {
+        "question": "When does mini-4 begin at CMU in Spring 2026?",
+        "id": "330"
+    },
+    {
+        "question": "What is the price range for the First Night Friends VIP Experience at Highmark First Night Pittsburgh?",
+        "id": "331"
+    },
+    {
+        "question": "What artist performs at Stage AE on March 22, 2026?",
+        "id": "332"
+    },
+    {
+        "question": "What time does the Kamin Science Center 21+ Nights event start on March 13, 2026?",
+        "id": "333"
+    },
+    {
+        "question": "What PSO concert program features Stravinsky's The Rite of Spring at Heinz Hall in April 2026?",
+        "id": "334"
+    },
+    {
+        "question": "What venue hosts Patti LuPone on March 3, 2026?",
+        "id": "335"
+    },
+    {
+        "question": "What Palenque dance performance takes place at August Wilson Cultural Center on March 28, 2026?",
+        "id": "336"
+    },
+    {
+        "question": "When does Bruce Springsteen and the E Street Band perform in Pittsburgh in 2026?",
+        "id": "337"
+    },
+    {
+        "question": "What opera does Pittsburgh Opera perform at the Benedum Center in late April/May 2026?",
+        "id": "338"
+    },
+    {
+        "question": "How much is parking at the Pittsburgh Irish Festival?",
+        "id": "339"
+    },
+    {
+        "question": "When does Journey perform at PPG Paints Arena in 2026?",
+        "id": "340"
+    },
+    {
+        "question": "What band performs at Stage AE on April 8, 2026?",
+        "id": "341"
+    },
+    {
+        "question": "When does Morgan Wallen perform in Pittsburgh in 2026?",
+        "id": "342"
+    },
+    {
+        "question": "What is the theme for CMU's Spring Carnival 2026?",
+        "id": "343"
+    },
+    {
+        "question": "What are the dates for Water for Elephants at the Benedum Center in Pittsburgh?",
+        "id": "344"
+    },
+    {
+        "question": "What type of meditation session occurs weekly on Thursdays from 5:05-5:40 PM?",
+        "id": "345"
+    },
+    {
+        "question": "What opera does Pittsburgh Opera present from Henry IV in April and May 2026?",
+        "id": "346"
+    },
+    {
+        "question": "Which team do the Pittsburgh Penguins host at PPG Paints Arena on March 31, 2026?",
+        "id": "347"
+    },
+    {
+        "question": "When does the Pittsburgh Symphony Orchestra perform Beethoven's Eroica at Heinz Hall in 2026?",
+        "id": "348"
+    },
+    {
+        "question": "What George Harrison tribute concert takes place at Carnegie of Homestead Music Hall in 2026?",
+        "id": "349"
+    },
+    {
+        "question": "Which annual edition of Highmark First Night Pittsburgh is held in 2026?",
+        "id": "350"
+    },
+    {
+        "question": "When does the Pittsburgh Symphony Orchestra perform Star Wars: The Empire Strikes Back in Concert?",
+        "id": "351"
+    },
+    {
+        "question": "What ballet does Pittsburgh Ballet Theatre present at the August Wilson Cultural Center on April 10-12, 2026?",
+        "id": "352"
+    },
+    {
+        "question": "At what time does Morgan Freeman's Symphonic Blues Experience begin at Heinz Hall on March 21, 2026?",
+        "id": "353"
+    },
+    {
+        "question": "What concert takes place at Petersen Events Center on March 26, 2026?",
+        "id": "354"
+    },
+    {
+        "question": "When does Zara Larsson perform in Pittsburgh in 2026?",
+        "id": "355"
+    },
+    {
+        "question": "Where does Texture Contemporary Ballet perform its 15th Anniversary Season finale, Eternal Beauty, on March 20-21, 2026?",
+        "id": "356"
+    },
+    {
+        "question": "What Pittsburgh venue hosts Aaron Lewinter and the Fortune of Love every Friday in 2026?",
+        "id": "357"
+    },
+    {
+        "question": "What venue hosts Don Toliver's Octane Tour on May 23, 2026?",
+        "id": "358"
+    },
+    {
+        "question": "On what specific dates does CMU Thanksgiving Break occur in Fall 2026?",
+        "id": "359"
+    },
+    {
+        "question": "What improv show runs at Arcade Comedy Theater through March 21, 2026, supporting Pittsburgh's vibrant improv scene?",
+        "id": "360"
+    },
+    {
+        "question": "What is the minimum age to participate in the Great Race 10K?",
+        "id": "361"
+    },
+    {
+        "question": "How much has the Pittsburgh Vintage Grand Prix raised for charity since 1983?",
+        "id": "362"
+    },
+    {
+        "question": "Where is the Pittsburgh Irish Festival held?",
+        "id": "363"
+    },
+    {
+        "question": "What is the length of the PVGP Panther Hollow Hillclimb course?",
+        "id": "364"
+    },
+    {
+        "question": "What Irish music session takes place on the first Monday of every month?",
+        "id": "365"
+    },
+    {
+        "question": "At what time does the Pittsburgh Penguins' Country Night game against the Dallas Stars begin on March 28, 2026?",
+        "id": "366"
+    },
+    {
+        "question": "What Gilbert and Sullivan operetta is performed by Pittsburgh Savoyards in March 2026?",
+        "id": "367"
+    },
+    {
+        "question": "Which team do the Pittsburgh Penguins play at PPG Paints Arena on March 31, 2026?",
+        "id": "368"
+    },
+    {
+        "question": "What comedy show runs at Pittsburgh Improv starting April 17, 2026?",
+        "id": "369"
+    },
+    {
+        "question": "What is the name of Nate Bargatze's 2026 comedy tour coming to PPG Paints Arena?",
+        "id": "370"
+    },
+    {
+        "question": "On what dates does the 2026 NFL Draft take place in Pittsburgh?",
+        "id": "371"
+    },
+    {
+        "question": "How many fans is the 2026 NFL Draft in Pittsburgh expected to draw?",
+        "id": "372"
+    },
+    {
+        "question": "What is the name of the Phipps Conservatory Spring Flower Show in 2026?",
+        "id": "373"
+    },
+    {
+        "question": "When does Pittsburgh Opera perform Falstaff in 2026?",
+        "id": "374"
+    },
+    {
+        "question": "How many Penguins home games are scheduled at PPG Paints Arena in March 2026?",
+        "id": "375"
+    },
+    {
+        "question": "What venue will host the 2026 NFL Draft Theater and Main Stage in Pittsburgh?",
+        "id": "376"
+    },
+    {
+        "question": "What comedian performs at Carnegie of Homestead Music Hall on April 17, 2026?",
+        "id": "377"
+    },
+    {
+        "question": "What bridge will be closed to vehicle traffic and activated as a pedestrian fan corridor during the 2026 NFL Draft?",
+        "id": "378"
+    },
+    {
+        "question": "What David Lynch film screens in 4K UltraHD restoration at the Kamin Science Center on March 20, 2026?",
+        "id": "379"
+    },
+    {
+        "question": "On what specific dates does Pittsburgh Opera perform Falstaff at the Benedum Center in 2026?",
+        "id": "380"
+    },
+    {
+        "question": "When does David Spade perform at the Byham Theater in 2026?",
+        "id": "381"
+    },
+    {
+        "question": "When does Kelsey Cook perform at Pittsburgh Improv in 2026?",
+        "id": "382"
+    },
+    {
+        "question": "How many days does the 2026 NFL Draft in Pittsburgh span?",
+        "id": "383"
+    },
+    {
+        "question": "At what time does the Don Toliver Octane Tour begin at PPG Paints Arena on May 23, 2026?",
+        "id": "384"
+    },
+    {
+        "question": "What fleet will provide river transportation between 2026 NFL Draft sites in Pittsburgh?",
+        "id": "385"
+    },
+    {
+        "question": "What venue hosts the Pittsburgh Savoyards' Spring 2026 production of The Grand Duke?",
+        "id": "386"
+    },
+    {
+        "question": "What themed night is designated for the Penguins' March 22, 2026 home game?",
+        "id": "387"
+    },
+    {
+        "question": "Which team do the Pittsburgh Penguins host on April 4, 2026 at PPG Paints Arena?",
+        "id": "388"
+    },
+    {
+        "question": "When does The Great Gatsby musical run at the Benedum Center in Pittsburgh?",
+        "id": "389"
+    },
+    {
+        "question": "What Stravinsky work does the Pittsburgh Symphony Orchestra perform in April 2026?",
+        "id": "390"
+    },
+    {
+        "question": "What Beethoven symphony does the Pittsburgh Symphony Orchestra perform with conductor Daniele Rustioni in Spring 2026?",
+        "id": "391"
+    },
+    {
+        "question": "What theme does Pittsburgh Opera's May 9, 2026 Song Shop concert celebrate?",
+        "id": "392"
+    },
+    {
+        "question": "What British band performs on the 'From The Pyre' tour in Pittsburgh in April 2026?",
+        "id": "393"
+    },
+    {
+        "question": "What is the name of the 5K race taking place on the final day of the 2026 NFL Draft in Pittsburgh?",
+        "id": "394"
+    },
+    {
+        "question": "What Penguins-themed community night is held during the March 31, 2026 home game against Detroit?",
+        "id": "395"
+    },
+    {
+        "question": "What three-day book lovers' event takes place in downtown Pittsburgh on May 22-24, 2026?",
+        "id": "396"
+    },
+    {
+        "question": "What Tony Award-winning musical comedy plays at the Benedum Center from April 14-19, 2026?",
+        "id": "397"
+    },
+    {
+        "question": "What team do the Pittsburgh Pirates face in their 2026 home opener at PNC Park on April 3?",
+        "id": "398"
+    },
+    {
+        "question": "What bobblehead is given away at the Pirates game on April 18, 2026?",
+        "id": "399"
+    },
+    {
+        "question": "What new civic space will host the grand opening coinciding with the 2026 Dollar Bank Three Rivers Arts Festival on June 5-7 & 11-14?",
+        "id": "400"
+    }
+]

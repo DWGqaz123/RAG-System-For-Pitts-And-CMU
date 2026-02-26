@@ -1,0 +1,14 @@
+beautifulsoup4
+bm25s
+faiss-cpu
+huggingface_hub
+lxml
+markdownify
+numpy
+pymupdf4llm
+python-dotenv
+requests
+sentence-transformers
+torch
+transformers
+tqdm

@@ -13,12 +13,12 @@ The recurring events dataset is fundamentally different from calendar events:
   • Rich description text → embedding-friendly chunk.
   • Category and area tags → useful for metadata filtering.
 
-Output:
-    data/processed/C_chunks.jsonl   (appended)
-
-Usage (import in notebook):
+Output
+------
+    data/processed/C/C_docs.jsonl    (appended)
+    data/processed/C/C_chunks.jsonl   (appended)
     from chunk_recurring_events import chunk_recurring_events
-    chunks = chunk_recurring_events("data/raw/recurring_events.csv")
+    chunks = chunk_recurring_events("data/raw/C/recurring_events.csv")
 """
 
 import csv
@@ -31,7 +31,7 @@ from pathlib import Path
 # Config
 # ──────────────────────────────────────────────
 
-PROCESSED_DIR = Path("data/processed")
+PROCESSED_DIR = Path("data/processed/C")
 OUT_CHUNKS    = PROCESSED_DIR / "C_chunks.jsonl"
 
 DOC_ID  = "C_recurring_events_pittsburgh"

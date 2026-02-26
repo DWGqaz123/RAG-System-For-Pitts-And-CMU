@@ -3,49 +3,15 @@ query_router.py
 ---------------
 LLM-based query router for the Pittsburgh RAG system.
 
-Uses meta-llama/Llama-3.1-8B-Instruct via the HuggingFace Serverless
-Inference API (Inference Providers) to classify a user query into one
-of four collection labels (A / B / C / D).
-
-How it works
-------------
-Llama-3.1-8B-Instruct is an instruction-tuned chat model.  We send a
-structured chat request (system prompt + user message) and constrain the
-output to a single letter by setting max_tokens=5 and temperature=0.0.
-The system prompt encodes the routing rules; the model outputs "A", "B",
-"C", or "D".  A regex fallback handles any unexpected output.
-
-Collection taxonomy
--------------------
-  A — General knowledge: Pittsburgh history, demographics, geography,
-      CMU general info, Wikipedia-style background.
-  B — Regulatory / fiscal: laws, taxes, budget, government spending,
-      permits, regulations, finance.
-  C — Live / time-sensitive: events, concerts, festivals, schedules,
-      calendars, "what's on this weekend".
-  D — Specific local entities: museums, sports teams (Steelers, Pirates,
-      Penguins), theaters, restaurants, venues.
-
-Setup
------
-  1. Create a .env file in the project root:
-         HF_TOKEN=hf_xxxxxxxxxxxxxxxxxxxxxxxx
-  2. pip install huggingface_hub python-dotenv
-  3. Make sure your HF account has access to Meta Llama models
-     (accept the license at https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct)
-
-Usage
------
-    from query_router import QueryRouter
-    router = QueryRouter()
-    label  = router.route("What is the payroll tax rate in Pittsburgh?")
-    # -> "B"
+Given a user question, it returns the two most likely collection labels
+(A/B/C/D) using meta-llama/Llama-3.1-8B-Instruct via the HF Inference
+API. The system prompt encodes routing rules; a regex fallback guards
+against malformed model outputs.
 """
 
-import os
 import re
 from pathlib import Path
-
+import os
 from dotenv import load_dotenv
 from huggingface_hub import InferenceClient
 
@@ -60,8 +26,8 @@ FALLBACK     = "A"    # returned on API error or unparseable output
 SYSTEM_PROMPT = """You are a query router for a RAG system.
 
 Your task:
-Given a user question, select the TWO most likely collections to retrieve from.
-Rank them by likelihood (most likely first).
+Given a user question, return the TWO most likely collections to search, ranked by likelihood (most likely first).
+Always return exactly two letters (A/B/C/D) separated by a comma. No explanation or extra text.
 
 Collections:
 
@@ -79,31 +45,25 @@ C. Dynamic Events
 - Time-sensitive event listings.
 - Examples: Visit PGH events, Downtown events, City Paper events, CMU Campus Calendars.
 - Use when user asks for:
-  - upcoming events
-  - things to do on a specific date
-  - this week/weekend
-  - schedules or calendars
-- STRICT temporal management:
-  Only relevant events are:
-    (1) recurring events (weekly/monthly/annual), OR
-    (2) events on or after March 19, 2026.
+    - upcoming events
+    - things to do on a specific date
+    - this week/weekend
+    - schedules or calendars
+- STRICT temporal management: Only events that are recurring OR on/after March 19, 2026.
 
 D. Culture & Sports
-- Museums, symphony, food festivals, sports teams.
+- Food, restaurants, museums, symphony, festivals, sports teams.
 - Mix of static info (what it is, history, venue info) and dynamic info (exhibits, games).
 - If mainly asking about WHAT an institution/team is → D.
 - If mainly asking about specific upcoming schedules → prefer C.
 
 Decision logic:
-1) If about regulations, taxes, compliance, financial numbers → B must be included.
-2) If explicitly asking for upcoming events, dates, schedules → C must be included.
-3) If about museums, symphony, festivals, sports teams → D is likely.
-4) Otherwise default to A.
-5) Always return EXACTLY TWO collections.
-
-Output EXACTLY TWO letters separated by a comma, ranked by relevance (most relevant first).
-Example: "A,C" or "D,B".
-Do not output any explanation, punctuation, or extra text."""
+1) Regulations/taxes/compliance/financial numbers → include B (often with A for background).
+2) Upcoming events/dates/schedules → include C (often with D for venues/teams).
+3) Museums/symphony/festivals/sports/food/restaurants → include D; add C if clearly date-bound.
+4) Otherwise default to A (may pair with B if rules/numbers appear).
+5) Output exactly TWO letters, ordered by likelihood.
+"""
 
 
 # ---------------------------------------------------------------------------
@@ -112,13 +72,13 @@ Do not output any explanation, punctuation, or extra text."""
 
 class QueryRouter:
     """
-    Routes a natural-language query to a collection label (A/B/C/D)
+    Routes a natural-language query to two collection labels (A/B/C/D)
     using meta-llama/Llama-3.1-8B-Instruct via the HF Serverless
     Inference API (Inference Providers).
 
     The model receives a system prompt defining routing rules and outputs
-    a single letter.  max_tokens=5 keeps cost minimal; temperature=0.0
-    makes results deterministic.
+    two letters. max_tokens=5 keeps cost minimal; temperature=0.0 makes
+    results deterministic.
     """
 
     def __init__(
@@ -158,13 +118,13 @@ class QueryRouter:
             labels = self._call_llm(query)
         except Exception as exc:
             err = str(exc)
-            # _call_llm 重试耗尽后仍抛出的 402/429，在这里兜底
+        
             if "402" in err or "429" in err:
-                print(f"  [router] API 额度问题，使用 fallback: {err[:50]}")
-                labels = [FALLBACK, "D"]
+                print(f"  [router] use fallback: {err[:50]}")
+                labels = [FALLBACK]
             else:
                 print(f"  [router] API error: {exc}")
-                labels = [FALLBACK, "D"]
+                labels = [FALLBACK]
 
         labels = self._ensure_two_labels(labels)
         if self.verbose:
@@ -185,9 +145,9 @@ class QueryRouter:
         retry_delay: float = 5.0,
     ) -> list[str]:
         """
-        Send one chat-completion request and parse the single-letter response.
+        Send one chat-completion request and parse the two-letter response.
 
-        max_tokens=5  — we only need one letter; limits cost and latency.
+        max_tokens=5  — we only need a couple of letters; limits cost and latency.
         temperature=0 — deterministic output.
         seed=42       — reproducible across identical requests.
 
@@ -226,11 +186,11 @@ class QueryRouter:
                         time.sleep(wait)
                     else:
                         print(f"  [router] 重试 {max_retries} 次仍失败，使用 fallback")
-                        return [FALLBACK, "D"]
+                        return [FALLBACK]
                 else:
-                    raise   # 非 402/429 错误直接抛出
+                    raise   
 
-        return [FALLBACK, "D"]
+        return [FALLBACK]
 
     @staticmethod
     def _parse_label(raw: str) -> list[str]:
@@ -242,13 +202,10 @@ class QueryRouter:
         if len(matches) >= 2:
             return matches[:2]
         if len(matches) == 1:
-            # if only one label is found, pad with a fallback to ensure we always return two labels
-            fallback = next((x for x in VALID_LABELS if x != matches[0]), FALLBACK)
-            print(f"  [router] only one label parsed from {raw!r} — padding with '{fallback}'")
-            return [matches[0], fallback]
+            return matches
 
         print(f"  [router] unparseable output: {raw!r} — using fallback")
-        return [FALLBACK, "B"]
+        return [FALLBACK]
 
     @staticmethod
     def _ensure_two_labels(labels: list[str]) -> list[str]:
@@ -258,12 +215,15 @@ class QueryRouter:
             if up in VALID_LABELS and up not in cleaned:
                 cleaned.append(up)
 
-        if len(cleaned) >= 2:
-            return cleaned[:2]
+        if not cleaned:
+            return [FALLBACK, "D"]
         if len(cleaned) == 1:
-            second = next((x for x in sorted(VALID_LABELS) if x != cleaned[0]), "D")
-            return [cleaned[0], second]
-        return [FALLBACK, "D"]
+            first = cleaned[0]
+            for candidate in ["A", "B", "C", "D"]:
+                if candidate != first:
+                    cleaned.append(candidate)
+                    break
+        return cleaned[:2]
 
 
 # ---------------------------------------------------------------------------
@@ -274,14 +234,14 @@ if __name__ == "__main__":
     router = QueryRouter()
 
     test_queries = [
-        ("What is the payroll tax rate in Pittsburgh?",   "B"),
-        ("Who founded Carnegie Mellon University?",       "A"),
-        ("Are there any concerts next Friday downtown?",  "C"),
-        ("Tell me about the Steelers' new stadium.",      "D"),
-        ("What is the population of Pittsburgh?",         "A"),
-        ("What permits do I need to open a restaurant?",  "B"),
-        ("What exhibitions are at Carnegie Museum?",      "D"),
-        ("When is the next Pittsburgh Symphony concert?", "C"),
+        ("What is the payroll tax rate in Pittsburgh?",   {"B", "A"}),
+        ("Who founded Carnegie Mellon University?",       {"A", "D"}),
+        ("Are there any concerts next Friday downtown?",  {"C", "D"}),
+        ("Tell me about the Steelers' new stadium.",      {"D", "A"}),
+        ("What is the population of Pittsburgh?",         {"A", "B"}),
+        ("What permits do I need to open a restaurant?",  {"B", "A"}),
+        ("What exhibitions are at Carnegie Museum?",      {"D", "A"}),
+        ("When is the next Pittsburgh Symphony concert?", {"C", "D"}),
     ]
 
     print("\n" + "=" * 60)
@@ -289,8 +249,9 @@ if __name__ == "__main__":
     print("=" * 60)
     correct = 0
     for query, expected in test_queries:
-        label = router.route(query)
-        mark  = "✓" if label == expected else "✗"
-        print(f"  {mark}  [{label}] expected=[{expected}]  {query}")
-        correct += label == expected
-    print(f"\n  Accuracy: {correct}/{len(test_queries)}")
+        labels = router.route(query)
+        hit    = labels[0] in expected and labels[1] in expected
+        mark   = "✓" if hit else "✗"
+        print(f"  {mark}  {labels} expected~{expected}  {query}")
+        correct += hit
+    print(f"\n  Accuracy (both in top-2 set): {correct}/{len(test_queries)}")
