@@ -9,3 +9,6 @@ venv/
 .venv/
 env/
 .DS_Store
+quesies.json
+testing_QA_data/
+test_set_day1.txt
