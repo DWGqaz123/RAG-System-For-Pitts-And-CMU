@@ -12,8 +12,8 @@ from huggingface_hub import InferenceClient
 # ---------------------------------------------------------------------------
 
 GENERATOR_MODEL   = "Qwen/Qwen2.5-14B-Instruct:featherless-ai"
-TOP_K_RETRIEVAL   = 20
-TOP_N_CONTEXT     = 10
+TOP_K_RETRIEVAL   = 10
+TOP_N_CONTEXT     = 5
 MAX_CONTEXT_CHARS = 1000
 MAX_NEW_TOKENS    = 512
 TEMPERATURE       = 0.1
